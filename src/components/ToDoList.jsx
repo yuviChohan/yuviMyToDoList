@@ -7,21 +7,23 @@ import {
   View,
   Text
 } from 'react-native';
+
 function ToDoList({tasks}) {
   return (
     <>
-        <ScrollView>
-          {tasks.map((task, index) => (
-            <Pressable key={index}>
-              <view style ={[styles.task]}>
+      <ScrollView>
+        {tasks.map((task, index) => (
+          <Pressable key={index}>
+            <View style={[styles.task]}>
               <Text style={styles.taskText}>{task}</Text>
-              </view>
-            </Pressable>
-          ))}
-        </ScrollView>
+            </View>
+          </Pressable>
+        ))}
+      </ScrollView>
     </>
-    );
-  }
+  );
+}
+
 const styles = StyleSheet.create({
   task: {
     padding: 10,
